@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    background: linear-gradient(45deg, #6200ea, #e91e63);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header .logo {
+    position: absolute;
+    top: 12.5px;
+    left: 25px;
+    width: 100px;
+    height: 100x;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border-color 0.5s ease-in-out;
+    border: 2px solid transparent;
+    text-align: left;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.animate {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animate:hover {
+    transform: scale(1.05);
+    border-color: transparent;
+    border-image: linear-gradient(45deg, #6200ea, #e91e63);
+    border-image-slice: 1;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(98, 0, 234, 0.8);
+    color: white;
+    font-size: 2em;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.play-button:hover {
+    background: linear-gradient(45deg, #6200ea, #e91e63);
+    color: white;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #6200ea, #e91e63);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s ease-in-out;
+}
+
+#scrollTopBtn:hover {
+    background: linear-gradient(45deg, #3700b3, #ad1457);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid;
+    animation: rotate 20s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* กำหนดตำแหน่งและสีของสามเหลี่ยม */
+.triangle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    border-bottom-color: #6200ea;
+}
+
+.triangle:nth-child(2) {
+    top: 50%;
+    left: 30%;
+    border-bottom-color: #e91e63;
+    animation-duration: 25s;
+}
+
+.triangle:nth-child(3) {
+    top: 80%;
+    left: 70%;
+    border-bottom-color: #6200ea;
+    animation-duration: 15s;
+}
+
+.triangle:nth-child(4) {
+    top: 30%;
+    left: 80%;
+    border-bottom-color: #e91e63;
+    animation-duration: 20s;
+}
+
+.triangle:nth-child(5) {
+    top: 15%;
+    left: 90%;
+    border-bottom-color: #6200ea;
+    animation-duration: 30s;
+}
+
+.triangle:nth-child(6) {
+    top: 60%;
+    left: 40%;
+    border-bottom-color: #e91e63;
+    animation-duration: 18s;
+}
+
+.triangle:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    border-bottom-color: #6200ea;
+    animation-duration: 22s;
+}
+
+.triangle:nth-child(8) {
+    top: 25%;
+    left: 10%;
+    border-bottom-color: #e91e63;
+    animation-duration: 27s;
+}
+.image-container {
+    max-width: 30%; /* ปรับขนาดรูปให้ไม่เกินขอบเขตของ container */
+    display: block; /* ให้ container แสดงเป็นบล็อก */
+    margin: auto; /* จัดตำแหน่งแนวนอนตรงกลาง */
+    border-radius: 50%; /* เพิ่มเส้นโค้งให้กับกรอบรูป */
+    overflow: hidden; /* ซ่อนส่วนที่อาจเกินขอบเขตของ container */
+}
+
+.image-container img {
+    width: 30%; /* ทำให้รูปภาพเต็มขนาดของ container */
+    height: auto; /* ปรับความสูงอัตโนมัติเพื่อรักษาสัดส่วน */
+    display: block; /* ให้รูปภาพแสดงเป็นบล็อก */
+    border-radius: 50%; /* เพิ่มเส้นโค้งให้กับกรอบรูป */
+}
+
+#presentation {
+    display: flex; /* ใช้ Flexbox เพื่อจัดหน้า */
+    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+}
+
+.presentation-content {
+    flex: 1; /* ให้ส่วนข้อความขยายตามพื้นที่ที่เหลือ */
+}
+
+.image-container {
+    max-width: 300px; /* กำหนดขนาดของรูปภาพ */
+    margin-right: -150px; /* เพิ่มระยะห่างด้านซ้ายของรูปภาพ */
+    border-radius: 50px; /* เพิ่มเส้นโค้งให้กับกรอบรูป */
+    overflow: hidden; /* ซ่อนส่วนที่อาจเกินขอบเขตของ container */
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px; /* กำหนดความกว้างของรูปภาพ */
+    height: 100px; /* กำหนดความสูงของรูปภาพ */
+    border-radius: 50%; /* ทำให้ขอบของรูปภาพเป็นวงกลม */
+    object-fit: cover; /* ให้รูปภาพเต็มพื้นที่โดยไม่บิดเบือน */
+    margin-bottom: 10px;
+}
+
+.download-button img {
+    width: 200px; /* กำหนดความกว้างของปุ่ม */
+    height: auto; /* ให้ความสูงปรับตามสัดส่วน */
+}
+
+
+
+
